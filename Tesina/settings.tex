@@ -1,0 +1,27 @@
+% Formato del documento
+\documentclass[12pt, a4paper, oneside]{book}
+
+% Package di input
+\usepackage{lmodern}
+\usepackage[UTF8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+% PDF
+\usepackage{pdfpages}
+\pdfminorversion = 7
+% pseudocodice
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+% Abstract
+\providecommand{\abstract}{} 
+\usepackage{abstract}
+% Fancyhdr (intestazione, header)
+\usepackage{fancyhdr}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\fancyhead[C]{\leftmark}
+	\fancyfoot[C]{\thepage}
+% Ref
+\usepackage{subcaption}
+\usepackage[hyperfootnotes=false]{hyperref}
+\usepackage[noabbrev]{cleveref}

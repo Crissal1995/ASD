@@ -1,0 +1,15 @@
+\hypertarget{Abstract}{}
+\bookmark[dest=Abstract]{Sommario}
+\begin{abstract}
+In questa tesina studieremo gli algoritmi di ordinamento visti durante il corso; ci concentreremo solamente su tre algoritmi di ordinamento sugli array, ovvero Insertion Sort, Merge Sort e per concludere Heap Sort.
+
+Introdurremo un algoritmo alla volta, discutendo della sua complessità asintotica e illustrando - tramite grafici realizzati in \mbox{Matlab} - il tempo necessario ad ordinare gli array al crescere delle dimensioni degli stessi.
+
+Abbiamo fatto variare il numero degli elementi da $10^{4}$ a $10^{6}$ su 100 array (per ogni algoritmo di ordinamento), quindi con un passo di $10^{4}$ elementi fra un array e l'altro (riferimento alla generazione \href{run:\pathjavaGetArraysInt}{qui}).
+
+È stato inoltre eliminato completamente il rumore dovuto allo scheduling grazie alla classe \verb|java.lang.management.ManagementFactory|, con la quale viene messo a disposizione il metodo \verb|getCurrentThreadCpuTime()|, in grado di restituire - in nanosecondi - il tempo che la CPU ha processato il nostro thread (riferimento \href{run:\pathjavaCpu}{qui}).
+
+Grazie a questo metodo, abbiamo potuto ottenere il vero tempo di esecuzione di ogni thread (e quindi il vero tempo di esecuzione dell'algoritmo sull'array di dimensioni $n$), senza fare semplicemente una differenza di timestamp; essa, infatti, non tiene conto né dello scheduling, né di altri fattori come la priorità dei thread assegnata dal SO: basta infatti chiudere a icona l'ambiente Eclipse, o aprire altri processi, per vedere il tempo di esecuzione cambiare notevolmente anche per algoritmi normalmente molto efficienti.
+
+Il processore adoperato per il benchmarking degli algoritmi è un dual-core (quad-core virtuale) clockato a frequenza 2.5 GHz, ma tutti gli algoritmi sono sviluppati con codice sequenziale (mentre l'esecuzione dello stesso algoritmo su più array diversi avviene in maniera parallela), quindi la scelta del numero di core è ininfluente.
+\end{abstract}
